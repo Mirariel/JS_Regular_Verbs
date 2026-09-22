@@ -1,11 +1,86 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="./assets/styles/reset.css" />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+  </head>
+  <script src="./assets/scripts/index.js"></script>
+  <body>
+    <div class="form">
+      <h2>Contact form</h2>
+      <p>Please fill in your information and we'll be sending your order.</p>
+      <form action="#" method="post">
+        <label>
+          Your name:
+          <input
+            name="firstName"
+            type="text"
+            placeholder="first name"
+            required
+            pattern="[A-Z][a-z]{1,19}(-[A-Z][a-z]{1,19})?"
+            maxlength="40"
+          />
+          <input
+            name="lastName"
+            type="text"
+            placeholder="first name"
+            required
+            pattern="[A-Z][a-z]{1,19}(-[A-Z][a-z]{1,19})?"
+            maxlength="40"
+          />
+        </label>
+        <label>
+          <input type="email" required placeholder="your_mail@gmail.com"
+        /></label>
+        <label
+          >Phone:
+          <input
+            name="phone_area"
+            type="tel"
+            inputmode="numeric"
+            maxlength="3"
+            pattern="[0-9]{3}"
+            placeholder="000"
+            required
+          />
+          <input
+            name="phone_prefix"
+            type="tel"
+            inputmode="numeric"
+            maxlength="3"
+            pattern="[0-9]{3}"
+            placeholder="000"
+            required
+          /><input
+            name="phone_line"
+            type="tel"
+            inputmode="numeric"
+            maxlength="4"
+            pattern="[0-9]{4}"
+            placeholder="0000"
+            required
+          />
+        </label>
+
+        <label>
+          <select name="message_subject" required>
+            <option value="">Select a subject</option>
+            <option value="support">Technical support</option>
+            <option value="feedback">Feedback / Suggestion</option>
+            <option value="bug">Report a bug</option>
+            <option value="other">Other</option>
+          </select>
+        </label>
+
+        <label
+          >Messege: <input type="text" required minlength="5" maxlength="120"
+        /></label>
+
+        <button type="submit">SUBMIT FORM</button>
+      </form>
+    </div>
+  </body>
 </html>
