@@ -1,7 +1,110 @@
+:root {
+  --text-color: grey;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.formComm {
+  font-size: 1rem;
+  padding: 15px 0px;
+}
+
 body {
-    min-height: 100vh;
-    display: flex;
-    background-image: url(/assets/images/bg.jpg);
-    background-size: cover;
-    background-position: center;
+  min-height: 100vh;
+  display: flex;
+  background-image: url(/assets/images/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+  justify-content: center;
+  background-color: aqua;
+}
+
+.form {
+  max-width: 900px;
+  min-width: 320px;
+  border: 1px solid white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 45px;
+  backdrop-filter: blur(6px);
+  color: var(--text-color);
+}
+
+.userForm {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  display: flex;
+  justify-content: space-between;
+  align-self: auto;
+  gap: 10px;
+  margin: 5px;
+  align-items: center;
+}
+
+select,
+input,
+textarea {
+  flex: 1 1 0;
+  border-radius: 5px;
+  border: 1px solid white;
+  padding: 3px;
+  background-color: rgb(232, 230, 228);
+  min-width: 60px;
+}
+
+textarea {
+  min-height: 70px;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  resize: vertical;
+}
+
+label > span {
+  width: 150px;
+}
+
+fieldset {
+  border: none;
+  border-bottom: 1px solid white;
+  margin-bottom: 15px;
+  min-width: 0;
+}
+
+button {
+  background-color: #0e4548;
+  padding: 10px 5px;
+  border-radius: 15px;
+  color: white;
+  border: none;
+
+}
+
+button > span {
+  border-bottom: 1px solid white;
+  padding: 5px;
+}
+
+@media (max-width: 600px) {
+  label {
+    flex-direction: column;
+    align-items: start;
+    justify-content: left;
+  }
+  select,
+  input {
+    width: 100%;
+  }
 }

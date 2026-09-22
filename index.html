@@ -11,75 +11,86 @@
   <body>
     <div class="form">
       <h2>Contact form</h2>
-      <p>Please fill in your information and we'll be sending your order.</p>
-      <form action="#" method="post">
-        <label>
-          Your name:
-          <input
-            name="firstName"
-            type="text"
-            placeholder="first name"
-            required
-            pattern="[A-Z][a-z]{1,19}(-[A-Z][a-z]{1,19})?"
-            maxlength="40"
-          />
-          <input
-            name="lastName"
-            type="text"
-            placeholder="first name"
-            required
-            pattern="[A-Z][a-z]{1,19}(-[A-Z][a-z]{1,19})?"
-            maxlength="40"
-          />
-        </label>
-        <label>
-          <input type="email" required placeholder="your_mail@gmail.com"
-        /></label>
-        <label
-          >Phone:
-          <input
-            name="phone_area"
-            type="tel"
-            inputmode="numeric"
-            maxlength="3"
-            pattern="[0-9]{3}"
-            placeholder="000"
-            required
-          />
-          <input
-            name="phone_prefix"
-            type="tel"
-            inputmode="numeric"
-            maxlength="3"
-            pattern="[0-9]{3}"
-            placeholder="000"
-            required
-          /><input
-            name="phone_line"
-            type="tel"
-            inputmode="numeric"
-            maxlength="4"
-            pattern="[0-9]{4}"
-            placeholder="0000"
-            required
-          />
-        </label>
+      <p class="formComm">
+        Please fill in your information and we'll be sending your order.
+      </p>
+      <form action="#" method="post" class="userForm">
+        <fieldset>
+          <label>
+            <span> Your name:</span>
+            <input
+              name="firstName"
+              type="text"
+              placeholder="first name"
+              required
+              pattern="[A-Z][a-z]{1,19}(-[A-Z][a-z]{1,19})?"
+              maxlength="40"
+            />
+            <input
+              name="lastName"
+              type="text"
+              placeholder="first name"
+              required
+              pattern="[A-Z][a-z]{1,19}(-[A-Z][a-z]{1,19})?"
+              maxlength="40"
+            />
+          </label>
+          <label>
+            <span>Your email: </span>
+            <input type="email" required placeholder="your_mail@gmail.com"
+          /></label>
+          <label>
+            <span>Phone:</span>
+            <input
+              name="phone_area"
+              type="tel"
+              inputmode="numeric"
+              maxlength="3"
+              pattern="[0-9]{3}"
+              placeholder="000"
+              required
+            />
+            <input
+              name="phone_prefix"
+              type="tel"
+              inputmode="numeric"
+              maxlength="3"
+              pattern="[0-9]{3}"
+              placeholder="000"
+              required
+            /><input
+              name="phone_line"
+              type="tel"
+              inputmode="numeric"
+              maxlength="4"
+              pattern="[0-9]{4}"
+              placeholder="0000"
+              required
+            />
+          </label>
 
-        <label>
-          <select name="message_subject" required>
-            <option value="">Select a subject</option>
-            <option value="support">Technical support</option>
-            <option value="feedback">Feedback / Suggestion</option>
-            <option value="bug">Report a bug</option>
-            <option value="other">Other</option>
-          </select>
-        </label>
+          <label>
+            <span> Message subject: </span>
+            <select name="message_subject" required>
+              <option value="">Select a subject</option>
+              <option value="support">Technical support</option>
+              <option value="feedback">Feedback / Suggestion</option>
+              <option value="bug">Report a bug</option>
+              <option value="other">Other</option>
+            </select>
+          </label>
 
-        <label
-          >Messege: <input type="text" required minlength="5" maxlength="120"
-        /></label>
-
-        <button type="submit">SUBMIT FORM</button>
+          <label
+            ><span>Messege:</span>
+            <textarea
+              name="messageText"
+              required
+              minlength="5"
+              maxlength="120"
+            ></textarea>
+          </label>
+        </fieldset>
+        <button type="submit"><span>SUBMIT FORM</span></button>
       </form>
     </div>
   </body>
