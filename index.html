@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./assets/styles/reset.css" />
     <link rel="stylesheet" href="./assets/styles/style.css" />
   </head>
-  <script src="./assets/scripts/index.js"></script>
+  <script defer src="./assets/scripts/index.js"></script>
   <body>
     <div class="form">
       <h2>Contact form</h2>
@@ -29,7 +29,7 @@
             <input
               name="lastName"
               type="text"
-              placeholder="first name"
+              placeholder="last name"
               required
               pattern="[A-Z][a-z]{1,19}(-[A-Z][a-z]{1,19})?"
               maxlength="40"
@@ -81,7 +81,7 @@
           </label>
 
           <label
-            ><span>Messege:</span>
+            ><span>Message:</span>
             <textarea
               name="messageText"
               required
