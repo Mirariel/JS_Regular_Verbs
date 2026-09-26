@@ -39,6 +39,16 @@ body {
   color: var(--text-color);
 }
 
+input:user-invalid {
+  border: 2px solid red;
+  background-color: rgba(242, 37, 37, 0.299);
+}
+
+input:user-valid {
+  border: 2px solid green;
+  background-color: rgba(161, 246, 34, 0.5);
+}
+
 .userForm {
   display: flex;
   flex-direction: column;
@@ -89,7 +99,6 @@ button {
   border-radius: 15px;
   color: white;
   border: none;
-
 }
 
 button > span {
